@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Exo, Oxygen } from "next/font/google";
 
 import "./styles/globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const oxygen = Oxygen({
   subsets: ["latin"],
+  weight: ["300", "400", "700"],
+  variable: "--font-oxygen",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const exo = Exo({
   subsets: ["latin"],
-});
+  variable: "--font-exo",
+})
 
 export const metadata: Metadata = {
   title: "e-commerce-start-up",
@@ -26,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased selection:bg-primary/95 selection:text-primary-foreground`}
+        className={`${oxygen.variable} ${exo.variable} font-sans antialiased selection:bg-primary/95 selection:text-primary-foreground`}
       >
         {children}
       </body>
